@@ -24,7 +24,7 @@ describe "comments#create action" do
   it "should return http status code of not found if the gram isn't found" do
   user = FactoryGirl.create(:user)
   sign_in user
-  post :create, params: { gram_id: gram.id, comment: { message: 'awesome gram'}}
+  post :create, params: { gram_id: 'YOLOSWAG', comment: { message: 'awesome gram'}}
   expect(response).to have_http_status :not_found
   end
 end
